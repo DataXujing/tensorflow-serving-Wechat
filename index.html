@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="cn">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Tensorflow+Wechat</title>
+
+		<link rel="icon" type="image/x-icon" href="img/favo.ico"/>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background-video="img/video.mp4" data-background-color="#000000" >
+					<h2 style="font-family:'STLiti',华文隶书"><font color="#0000FF">一个基于微信的深度学习应用</font></h2>
+					<h6 style="text-transform:none">Deep Learning + TensorFlow + WeChat</h6>
+ 
+					<br>
+					<br>
+					<p>
+						<small>Created By <a href="https://dataxujing.github.io" target='_blank'>徐静</a> </small>
+					</p>
+					<p>
+						<small>Date 2018-11-11</small>
+					</p>
+				</section>
+
+				<section style="font-family:'STLiti',华文隶书">
+					<h3 style="font-family:'STLiti',华文隶书">内容</h3>
+					<hr style="transition:width 0.5s linear">
+					<ol>
+						<li>&#9760 如何部署一个基于TensorFlow的应用？【速度】</li>
+						<li>&#9760 Simple TensorFlow Serving</li>
+						<li>&#9760 TensorFlow Serving + Docker </li>
+						<li>&#9760 基于微信的图像识别应用 <a href="https://dataxujing.github.io/Fiery-and-RweiXin/" target="_blank">【灵感来源】</a></li>
+					</ol>
+					<hr>
+				</section>
+
+				<!-- Section 1: 如何部署tf model -->
+				<section style="font-family:'STLiti',华文隶书">
+				 	<!-- 下箭头翻页 1-->
+					<section>
+						<h3 style="font-family:'STLiti',华文隶书">1.如何部署一个基于TensorFlow的应用?</h3>
+						<br>
+						<ul>
+							<li style="list-style-type:none;">&#9997 传统的机器学习模型我们已经有很多方法：<a href="https://yq.aliyun.com/articles/614406?utm_content=m_1000007161" target='_blank'>Code2Code</a>&#10004、
+							<a href="https://dataxujing.github.io/R_online/" target='_blank'>API接口</a>&#10004、
+							<a href="https://github.com/DataXujing/boston_model" target="_blank">GUI开发(R,Python)</a>&#10004、
+							<a href="https://www.ibm.com/developerworks/cn/opensource/ind-PMML1/" target='_blank'>PMML</a>&#10008、嵌入式&#10008</li>
+							<li style="list-style-type:none;">&#9997 一般的思路：模型训练和预测均在线上；模型训练在线下(模型文件，pickle文件，二进制文件等保存模型必要的参数，超参数和模型结构)然后线上做预测</li>
+						</ul>
+
+					</section>
+					<section>
+						<ul>
+							<li style="list-style-type:none;">&#9760 <a href="https://github.com/DataXujing/xiaoX" target="_blank">TensorFlow模型持久化后调用速度慢怎样解决?</a></li>
+							<li style="list-style-type:none;">&#9760 <a href="https://gyang274.github.io/tensorflow-serving-tutorial/" target="_blank">用TensorFlow Serving去部署吧 </a> [来源于一次面基]</li>
+
+							<li style="list-style-type:none;">&#9760 无意间发现了一个更简单的办法: <a href="https://stfs.readthedocs.io/en/latest/" target="_blank">Simple TensorFlow Serving</a></li>
+
+							<li style="list-style-type:none;">&#9760 Support multiple models of TensorFlow/ MXNet/ PyTorch/ Caffe2/ CNTK/ ONNX/ H2o/ Scikit-learn/ XGBoost/ PMML &#9996</li>
+						</ul>
+				
+					</section>
+					<section data-background="img/sfts1.jpeg" >
+						
+						<!-- <img src="img/sfts1.jpeg"  alt="SFTS支持多客户端多模型" /> -->
+
+					</section>
+					<section data-background="img/sfts2.jpeg" >
+						
+						<!-- <img src="img/sfts2.jpeg"  alt="SFTS速度" /> -->
+
+					</section>
+					<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+						
+						<p>我们将部署一个训练好的CNN模型，并基于微信做成图像识别应用 &#9749 </p>
+
+					</section>
+				</section>
+
+				<!-- section2: STFS -->
+
+				<section style="font-family:'STLiti',华文隶书">
+					<h3 style="font-family:'STLiti',华文隶书;text-transform:none">2.Simple TensorFlow Serving</h3>
+		
+				</section>
+
+				<!-- section3 tfs+docker -->
+				<section>
+					<section>
+					<h3  style="font-family:'STLiti',华文隶书;text-transform:none">3.TensorFlow Serving + Docker</h3>
+					</section>
+
+					<section id="fragments">
+						<h2>Fragments</h2>
+						<p>Hit the next arrow...</p>
+						<p class="fragment">... to step through ...</p>
+						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+
+						<aside class="notes">
+							This slide has fragments which are also stepped through in the notes window.
+						</aside>
+					</section>
+
+					<section>
+						<h2>Fragment Styles</h2>
+						<p>There's different types of fragments, like:</p>
+						<p class="fragment grow">grow</p>
+						<p class="fragment shrink">shrink</p>
+						<p class="fragment fade-out">fade-out</p>
+						<p>
+							<span style="display: inline-block;" class="fragment fade-right">fade-right, </span>
+							<span style="display: inline-block;" class="fragment fade-up">up, </span>
+							<span style="display: inline-block;" class="fragment fade-down">down, </span>
+							<span style="display: inline-block;" class="fragment fade-left">left</span>
+						</p>
+						<p class="fragment fade-in-then-out">fade-in-then-out</p>
+						<p class="fragment fade-in-then-semi-out">fade-in-then-semi-out</p>
+						<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
+					</section>
+					
+				</section>
+
+
+				<!-- section4 基于微信的图像识别应用  -->
+				<section>
+					<section>
+					<h3 style="font-family:'STLiti',华文隶书;text-transform:none">基于微信的图像识别应用</h3>
+
+					<pre>
+						<code class="hljs" data-trim contenteditable>
+							function linkify( selector ) {
+							  if( supports3DTransforms ) {
+
+							    var nodes = document.querySelectorAll( selector );
+
+							    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+							      var node = nodes[i];
+
+							      if( !node.className ) {
+							        node.className += ' roll';
+							      }
+							    }
+							  }
+							}
+						</code>
+					</pre>
+					</section>
+
+					<section>
+					<h2>Clever Quotes</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice thing about standards is that there are so many to choose from</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+					</blockquote>
+					</section>
+
+				</section>
+
+		
+				<!-- section5 the end -->
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+					<p>
+						- <a href="https://slides.com">Thanks Reveal.js</a> <br>
+						- <a href="https://github.com/hakimel/reveal.js"> Reveal.js</a> <br>
+						- <a href="https://github.com/DataXujing/tensorflow-serving-Wechat">Source code &amp; documentation</a><br>
+						- <a href="123">Online Slides</a>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<!-- Other Code -->
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
