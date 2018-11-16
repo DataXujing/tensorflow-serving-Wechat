@@ -3,7 +3,7 @@
 
 徐静
 
-+ 内容详见在线[slides]()
++ 内容详见在线[slides](https://dataxujing.github.io/tensorflow-serving-Wechat/?transition=convex#/)
 + 在线slides的使用说明
 	- 不同的切换方式
 		- ?transition=none#/transitions(None)

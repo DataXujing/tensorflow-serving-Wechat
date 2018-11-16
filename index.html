@@ -42,8 +42,9 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section data-background-video="img/video.mp4" data-background-color="#000000" >
-					<h2 style="font-family:'STLiti',华文隶书"><font color="#0000FF">一个基于微信的深度学习应用</font></h2>
+				<!-- <section data-background-video="img/video.mp4" data-background-color="#000000" > -->
+				<section>
+					<h3 style="font-family:'STLiti',华文隶书"><font color="#0000FF">一个基于微信的视觉问答系统应用</font></h3>
 					<h6 style="text-transform:none">Deep Learning + TensorFlow + WeChat</h6>
  
 					<br>
@@ -56,35 +57,49 @@
 					</p>
 				</section>
 
-				<section style="font-family:'STLiti',华文隶书">
-					<h3 style="font-family:'STLiti',华文隶书">内容</h3>
+				<section style="text-align: left;">
+					<h5>内容</h5>
 					<hr style="transition:width 0.5s linear">
-					<ol>
-						<li>&#9760 如何部署一个基于TensorFlow的应用？【速度】</li>
-						<li>&#9760 Simple TensorFlow Serving</li>
-						<li>&#9760 TensorFlow Serving + Docker </li>
-						<li>&#9760 基于微信的图像识别应用 <a href="https://dataxujing.github.io/Fiery-and-RweiXin/" target="_blank">【灵感来源】</a></li>
-					</ol>
+					
+					<p>&#9760 Simple TensorFlow Serving</p>
+					<p>&#9760 TensorFlow Serving + Docker </p>
+					<p>&#9760 基于微信的图像识别应用 <a href="https://dataxujing.github.io/Fiery-and-RweiXin/" target="_blank">【灵感来源】</a></p>
+			
 					<hr>
 				</section>
 
 				<!-- Section 1: 如何部署tf model -->
-				<section style="font-family:'STLiti',华文隶书">
+				<section>
 				 	<!-- 下箭头翻页 1-->
 					<section>
-						<h3 style="font-family:'STLiti',华文隶书">1.如何部署一个基于TensorFlow的应用?</h3>
+						<h5 style="font-family:'STLiti',华文隶书">1.如何部署一个基于TensorFlow的应用?</h5>
+					</section>
+					<section>
 						<br>
-						<ul>
-							<li style="list-style-type:none;">&#9997 传统的机器学习模型我们已经有很多方法：<a href="https://yq.aliyun.com/articles/614406?utm_content=m_1000007161" target='_blank'>Code2Code</a>&#10004、
-							<a href="https://dataxujing.github.io/R_online/" target='_blank'>API接口</a>&#10004、
-							<a href="https://github.com/DataXujing/boston_model" target="_blank">GUI开发(R,Python)</a>&#10004、
-							<a href="https://www.ibm.com/developerworks/cn/opensource/ind-PMML1/" target='_blank'>PMML</a>&#10008、嵌入式&#10008</li>
-							<li style="list-style-type:none;">&#9997 一般的思路：模型训练和预测均在线上；模型训练在线下(模型文件，pickle文件，二进制文件等保存模型必要的参数，超参数和模型结构)然后线上做预测</li>
+						<ul style="font-size:30px">
+							<li style="list-style-type:none;">&#9997 传统的机器学习模型我们已经有很多方法：
+								<ul>
+								<li><a href="https://yq.aliyun.com/articles/614406?utm_content=m_1000007161" target='_blank'>Code2Code</a>&#10004</li>
+								<li><a href="https://dataxujing.github.io/R_online/" target='_blank'>API接口(R,Python)</a>&#10004</li>
+								<li><a href="https://github.com/DataXujing/boston_model" target="_blank">GUI开发(R:rattle,Ricetl,Python:PyQt5,Kivy)</a>&#10004</li>
+								<li><a href="https://www.ibm.com/developerworks/cn/opensource/ind-PMML1/" target='_blank'>PMML</a>&#10008</li>
+								<li>嵌入式&#10008</li>
+								</ul>
+							</li>
+							<li style="list-style-type:none;">&#9997 一般的思路：
+								<ul>
+								 <li>模型训练和预测均在线上</li>
+								 <li>模型训练在线下(模型文件，pickle文件，二进制文件等保存模型必要的参数，超参数和模型结构)然后线上做预测</li>
+								</ul>
+
+							</li>
 						</ul>
 
 					</section>
-					<section>
-						<ul>
+					<section style="text-align: left;">
+						<p>对于TensorFlow训练的Model呢？</p>
+						<br>
+						<ul style="font-size:30px">
 							<li style="list-style-type:none;">&#9760 <a href="https://github.com/DataXujing/xiaoX" target="_blank">TensorFlow模型持久化后调用速度慢怎样解决?</a></li>
 							<li style="list-style-type:none;">&#9760 <a href="https://gyang274.github.io/tensorflow-serving-tutorial/" target="_blank">用TensorFlow Serving去部署吧 </a> [来源于一次面基]</li>
 
@@ -113,43 +128,468 @@
 
 				<!-- section2: STFS -->
 
-				<section style="font-family:'STLiti',华文隶书">
-					<h3 style="font-family:'STLiti',华文隶书;text-transform:none">2.Simple TensorFlow Serving</h3>
-		
+				<section>
+					<section>
+						<h3 style="font-family:'STLiti',华文隶书;text-transform:none">2.Simple TensorFlow Serving</h3>
+						<br>
+						<br>
+						<br>
+
+						<ul style="font-size:25px;list-style-type:none;">
+							<li>&#9760 教程: 
+							<ul style="font-size:20px">
+							<li>
+							<a href="https://stfs.readthedocs.io/en/latest/" target="_blank">https://stfs.readthedocs.io/en/latest/</a></li>
+							</ul>
+							</li>
+							<li>&#9760 项目地址: 
+							<ul style="font-size:20px">
+							<li>
+							<a href="https://github.com/tobegit3hub/simple_tensorflow_serving" target="_blank">https://github.com/tobegit3hub/simple_tensorflow_serving</a></li>
+							</ul>
+							</li>
+
+						</ul>
+					</section>
+						
+					<section style="text-align: left; ">
+						<p style="font-size:30px">
+						&#9760 Support distributed TensorFlow models <br>
+						&#9760 Support the general RESTful/HTTP APIs <br>
+						&#9760 Support inference with accelerated GPU <br>
+						&#9760 Support curl and other command-line tools <br>
+						&#9760 Support clients in any programming language <br>
+						&#9760 Support code-gen client by models without coding <br>
+						&#9760 Support inference with raw file for image models <br>
+						&#9760 Support statistical metrics for verbose requests <br>
+						&#9760 Support serving multiple models at the same time <br>
+						&#9760 Support dynamic online and offline for model versions <br>
+						&#9760 Support loading new custom op for TensorFlow models <br>
+						&#9760 Support secure authentication with configurable basic auth<br>
+						&#9760 Support multiple models of TensorFlow/MXNet/PyTorch/Caffe2/CNTK/ONNX/H2o/Scikit-learn/XGBoost/PMML
+						</p>
+					</section>
+					<section>
+					<pre>
+						<code class="hljs" data-trim contenteditable>
+							# 常用命令
+							simple_tensorflow_serving --model_base_path="./model" --model_platform="scikitlearn" --model_version="v0.1.0"
+
+							simple_tensorflow_serving --model_config_file="./examples/model_config_file.json"
+							# 服务的常用配置
+							{
+							  "model_config_list": [
+							    {
+							      "name": "ResNet For WeChat Server",
+							      "base_path": "/home/soft/simple_tf_server/ResNet_v1",
+							      "platform": "tensorflow"
+							      "version":lx_v0.1.0
+							    }, {
+							      "name": "server2",
+							      "base_path": "model_save_path2",
+							      "platform": "scikitlearn"
+							    }, {
+							       "name": "server3",
+							       "base_path": "path3",
+							       "platform": "mxnet"
+							    }
+							  ]
+							}
+						</code>
+					</pre>
+					</section>
+
+					<section style="text-align: left;">
+					<h5 style="text-transform:none;"> TensorFlow SavedModel保存和加载模型</h5>
+					<p style="font-size:30px">
+						&#9760经常看到的 tf.train.Saver对应的东西。使用这种方法保存模型会产生两种文件:</p>
+						<p  style="font-size:20px"><span class="fragment">.meta: 里面存储的是整个graph的定义;</span>
+						<span class="fragment">checkpoint: 这里保存的是 variable 的状态</span>
+						<span class="fragment">.index文件保存了当前参数名</span><span class="fragment">.data文件保存了当前参数值</span></p>
+						
+					
+
+						<pre>
+						<code class="hljs" data-trim contenteditable>
+							# 模型保存的过程
+							checkpoint_dir = "mysaver"
+
+							# first creat a simple graph
+							graph = tf.Graph()
+
+							#define a simple graph
+							with graph.as_default():
+							    x = tf.placeholder(tf.float32,shape=[],name='input')
+							    y = tf.Variable(initial_value=0,dtype=tf.float32,name="y_variable")
+							    update_y = y.assign(x)
+							    saver = tf.train.Saver(max_to_keep=3)
+							    init_op = tf.global_variables_initializer()
+
+							# train the model and save the model every 4000 iterations.
+							sess = tf.Session(graph=graph)
+							sess.run(init_op)
+							for i in range(1,10000):
+							    y_result = sess.run(update_y,feed_dict={x:i})
+							    if i %4000 == 0:
+							        saver.save(sess,checkpoint_dir,global_step=i) 
+							# 模型复原
+							tf.reset_default_graph()
+							restore_graph = tf.Graph()
+							with tf.Session(graph=restore_graph) as restore_sess:
+							    restore_saver = tf.train.import_meta_graph('mysaver-8000.meta')
+							    restore_saver.restore(restore_sess,tf.train.latest_checkpoint('./'))
+							    print(restore_sess.run("y_variable:0"))
+
+						</code>
+						</pre>
+					</p>
+					</section>
+
+					<section style="text-align: left;">
+					 <p style="font-size:25px">&#9760 tf.train.Saver()有缺点</p><br>
+					 <pre>
+						<code class="hljs" data-trim contenteditable>
+						# tf.train.import_meta_graph函数给出model.ckpt-n.meta的路径后会加载图结构，
+						# 并返回saver对象
+						import tensorflow as tf
+						# 直接加载持久化的图
+						saver = tf.train.import_meta_graph(
+						"path/xxx.meta")
+						with tf.Session() as sess:
+							saver.restore(sess,"path/xxx.ckpt")
+							# 通过张量名称获取张量
+							print(sess.run(tf.get_default_graph().get_tensor_by_name("add:0")))
+
+						</code>
+						</pre>
+
+					</section>
+
+					<section style="text-align: left;">
+					<h6 style="text-transform:none;">SavedModel</h6>
+
+						<p style="font-size:25px">推荐使用SaveModel. SaveModel是一种与语言无关，可恢复的密封式序列化格式。TensorFlow提供了多种与SavedModel交互的机制，如tf.saved_model API、Estimator API和CLI。</p>
+
+						<p style="font-size:25px"><span class="fragment">1.建立一个 tf.saved_model.builder.SavedModelBuilder.</span> <br>
+						<span class="fragment">2.使用刚刚建立的 builder把当前的graph和variable添加进去：SavedModelBuilder.add_meta_graph_and_variables(...)</span> <br>
+						<span class="fragment">3.可以使用　SavedModelBuilder.add_meta_graph 添加多个meta graph</span><br></p>
+
+					<h6 style="text-transform:none;">SavedModel导入</h6>
+						<p  class="fragment" style="font-size:25px">tf.saved_model.loader.load()</p>
+						<p style="font-size:25px"><span class="fragment">1.要在其中恢复图定义和变量的会话</span><br>
+						<span class="fragment">2.用于标识要加载的 MetaGraphDef 的标签</span><br>
+						<span class="fragment">3.SavedModel 的位置（目录）</span>
+
+
+						<aside class="notes">
+							https://tensorflow.google.cn/programmers_guide/saved_model#models
+						</aside>
+					</section>
+
+					<section style="text-align: left;">
+					<p style="font-size:30px">&#9760 tf.saved_model.builder.SavedModelBuilder</p>
+					<pre>
+					<code class="hljs" data-trim contenteditable>
+					class tf.saved_model.builder.SavedModelBuilder
+
+					# 初始化方法
+					__init__(export_dir)
+
+					# 导入graph与变量信息 
+					add_meta_graph_and_variables(
+					    sess,
+					    tags,
+					    signature_def_map=None,
+					    assets_collection=None,
+					    legacy_init_op=None,
+					    clear_devices=False,
+					    main_op=None
+					)
+
+					# 载入保存好的模型
+					tf.saved_model.loader.load(
+					    sess,
+					    tags,
+					    export_dir,
+					    **saver_kwargs
+					)
+
+					</code>
+					</pre>
+					</section>
+
+					<section style="text-align: left;">
+					<p style="font-size:30px">&#9760 模型保存后的结构</p>
+					<pre>
+					<code class="hljs" data-trim contenteditable>
+
+					assets/ #是包含辅助（外部）文件（如词汇表）的子文件夹
+					assets.extra/ #一个子文件夹，其中较高级别的库和用户可以添加自己的资源，这些资源与模型共存，但不会被图加载
+					variables/ #是包含 tf.train.Saver 的输出的子文件夹
+					    variables.data-?????-of-?????
+					    variables.index
+					saved_model.pb|saved_model.pbtxt #是 SavedModel 协议缓冲区。它包含作为 MetaGraphDef 协议缓冲区的图定义
+					</code>
+					</pre>
+
+					</section>
+
+					<section style="text-align: left;">
+					<p style="font-size:30px">&#9760 Example</p>
+					
+					<pre>
+					<code class="hljs" data-trim contenteditable>
+					tensor_info_input = tf.saved_model.utils.build_tensor_info(input)
+					tensor_info_output = tf.saved_model.utils.build_tensor_info(output)
+					sess = tf.Session()
+					builder = tf.saved_model.builder.SavedModelBuilder(export_path)
+					signatures =(
+					    tf.saved_model.signature_def_utils.build_signature_def(
+					        inputs={'input': tensor_info_input},
+					        outputs={'output': tensor_info_output},
+					        method_name=tf.saved_model.signature_constants.PREDICT_METHOD_NAME
+					    )
+					)
+					sess.run(tf.global_variables_initializer())
+					builder.add_meta_graph_and_variables(sess=sess, tags=[tf.saved_model.tag_constants.SERVING], signature_def_map={
+					    'predict': signatures
+					})
+					builder.save()
+
+					</code>
+					</pre>
+
+					</section >
+
+					<section style="text-align: left;">
+						<p style="font-size:30px">&#9760 参数列表</p>
+						<img src='img/sig_para.png'>
+
+					</section>
+				
+
+					<section style="text-align: left;">
+						<p style="font-size:30px">&#9760 参数tags</p>
+						<img src='img/tag.png'>
+					</section>
+
+					<section style="text-align: left;">
+						<p style="font-size:30px">&#9760 <a href="https://github.com/tensorflow/serving/blob/master/tensorflow_serving/g3doc/signature_defs.md" target="_blank">使用SignatureDef</a></p>
+						
+						<p style="font-size:20px">1.SignatureDef，将输入输出tensor的信息都进行了封装，并且给他们一个自定义的别名，所以在构建模型的阶段，可以随便给tensor命名，只要在保存训练好的模型的时候，在SignatureDef中给出统一的别名即可。</p>
+						<p style="font-size:20px">2.TensorFlow的关于这部分的例子中用到了不少<a href="https://tensorflow.google.cn/api_docs/python/tf/saved_model/signature_constants" target="_blank">signature_constants</a>，这些constants的用处主要是提供了一个方便统一的命名。</p>
+
+						<pre>
+							<code class="hljs" data-trim contenteditable>
+							# 构建signature
+							tf.saved_model.signature_def_utils.build_signature_def(
+							    inputs=None,
+							    outputs=None,
+							    method_name=None
+							)
+
+							# 构建tensor info 
+							tf.saved_model.utils.build_tensor_info(tensor)
+							</code>
+						</pre>
+					
+					</section>
+
+					<section style="text-align: left;">
+					<p class="fragment grow" style="font-size:30px"><a href="coede_static/code_stfs1.html" target="_blank">一个小栗子</a></p>
+
+					<p class="fragment grow" style="font-size:30px">训练好的saveModel要保存</p>
+					<p class="fragment grow" style="font-size:30px"><a href="http://172.16.100.147:8500/" target="_blank">看一下我们部署的深度学习Model</a></p>
+					<pre>
+					<code class="hljs" data-trim contenteditable>
+					simple_tensorflow_serving -h
+					simple_tensorflow_serving --model_base_path="/home/soft/model"
+
+					</code>
+					</pre>
+
+					</section>
+
+					<section style="text-align: left;">
+					<p style="font-size:25px">&#9760 saveModel导入</p>
+					<pre>
+					<code class="hljs" data-trim contenteditable>
+					export_dir = ...
+					...
+					with tf.Session(graph=tf.Graph()) as sess:
+					  tf.saved_model.loader.load(sess, [tag_constants.TRAINING], export_dir)
+					  ...
+					</code>
+					</pre>
+
+					<p style="font-size:25px" class="fragment grow">简单保存：tf.saved_model.simple_save </p>
+					<p style="font-size:25px" class="fragment grow">搭配 Estimator 使用 SavedModel </p>
+					<p style="font-size:25px" class="fragment grow">使用 CLI 检查并执行 SavedModel </p>
+
+					</section>
+
+					<section data-background="img/score.jpeg" >
+					</section>
+
 				</section>
 
 				<!-- section3 tfs+docker -->
 				<section>
 					<section>
-					<h3  style="font-family:'STLiti',华文隶书;text-transform:none">3.TensorFlow Serving + Docker</h3>
+					<h3 style="font-family:'STLiti',华文隶书;text-transform:none">3.TensorFlow Serving + Docker</h3>
 					</section>
 
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+					<section style="text-align: left;">
+					<p style="font-size:30px">&#9760 Docker-快到碗里来！</p>
+					<br>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
+					<blockquote cite="http://www.runoob.com/docker/docker-tutorial.html" style="font-size:25px">
+
+						&nbsp; &nbsp; &nbsp; &nbsp; Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.0协议开源。<br>
+
+						&nbsp; &nbsp; &nbsp; &nbsp;Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。<br>
+
+						&nbsp; &nbsp; &nbsp; &nbsp;容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。
+						</blockquote>
 					</section>
 
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p>
-							<span style="display: inline-block;" class="fragment fade-right">fade-right, </span>
-							<span style="display: inline-block;" class="fragment fade-up">up, </span>
-							<span style="display: inline-block;" class="fragment fade-down">down, </span>
-							<span style="display: inline-block;" class="fragment fade-left">left</span>
-						</p>
-						<p class="fragment fade-in-then-out">fade-in-then-out</p>
-						<p class="fragment fade-in-then-semi-out">fade-in-then-semi-out</p>
-						<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
+					<section style="text-align: left;">
+									
+					<a href="http://www.docker.org.cn/" target="_blank"><img src="img/docker_CN.png" style="border:0;"></a><br>
+
+				<!-- 	<a href="http://www.runoob.com/docker/docker-tutorial.html" target="_blank"><img src="img/cainiao.png" style="border:0;"></a> -->
+					
+					<ul style="font-size:30px;list-style-type:none;">
+					<li>&#9760 Docker通常用于如下场景：
+					<ul style="font-size:25px">
+						<li>web应用的自动化打包和发布</li>
+						<li>自动化测试和持续集成、发布</li>
+						<li>在服务型环境中部署和调整数据库或其他的后台应用</li>
+						<li>从头编译或者扩展现有的OpenShift或Cloud Foundry平台来搭建自己的PaaS环境</li>
+					</ul>
+					</li>
+					<li>&#9760 不是本节课重点,可以自行学习</li>
+					</ul>
+					</section>
+
+					<section style="text-align: left;">
+					<p style="font-size:30px">&#9760 1.模型保存：savedModel</p>
+					<br>
+						<a href="coede_static/code_avemodel.html" target="_blank"><p>【点我查看官方提供的样例】</p></a>
+
+					</section>
+
+					<section style="text-align: left;">
+					<p style="font-size:30px">&#9760 2.Docker安装tensorflow serving</p>
+					<br>
+					<p class="fragment highlight-red" style="font-size:30px">安装方式有很多种，官方推荐通过Docker</p>
+
+					<pre>
+					<code  class="hljs" data-trim contenteditable>
+					# docker镜像中运行资源(会在dockerHub中安装该镜像)
+					docker run tensorflow/serving 
+					#安装GPU版的，还需要nvidia-docker
+					docker pull tensorflow/serving:latest-gpu 
+					#查看现在系统中存在的镜像
+					docker images 
+					
+					# 后边会常用的docker命令
+					docker pull **
+					docker ps # 查看正在运行的容器列表
+					docker stop IDs
+					docker rmi IDs
+					docker rm XXX
+					</code>
+					</pre>
+					
+
+					</section>
+
+					<section style="text-align: left;">
+					<p style="font-size:30px">&#9760 3.Docker部署tensorflow serving</p>
+					<br>
+
+					<pre>
+					<code  class="hljs" data-trim contenteditable>
+					# 在我们的GPU服务器上
+					docker run -p 8501:8501 \
+					  --mount type=bind,source=/home/xujing/lx_soft/saved_model_half_plus_two_cpu,target=/models/half_plus_two \
+					  -e MODEL_NAME=half_plus_two -t tensorflow/serving &
+
+					curl -d '{"instances": [1.0, 2.0, 5.0]}' \
+  						-X POST http://localhost:8501/v1/models/half_plus_two:predict
+					</code>
+					</pre>
+
+					<pre>
+					<code  class="hljs" data-trim contenteditable>
+					
+					# 在我们GPU服务器上
+					docker run -p 8501:8501 \
+					  --mount type=bind,source=/home/xujing/lx_soft/resnet,target=/models/resnet \
+					  -e MODEL_NAME=resnet -t tensorflow/serving &
+					</code>
+					</pre>
+
+					<p style="font-size:25px" class="fragment grow">开启我们的TensorFlow Serving 部署ResNet 50</p>
+
+					</section>
+
+					<section style="text-align: left;">
+					<p style="font-size:30px">&#9760 4.测试部署的TensorFlow部署的Model</p>
+					<br>
+
+					<p style="font-size:25px" class="fragment grow">很大的坑调了我2天！</p>
+
+					<pre>
+					<code  class="hljs" data-trim contenteditable>
+
+					from __future__ import print_function
+					import base64
+					import requests
+
+					SERVER_URL = 'xxx'
+
+					# from scipy import ndimage  # 图像转化为n维数组
+					# image_ndarray = ndimage.imread("pic3/1.jpg", mode="RGB") #RGB
+					def predict_api():
+
+						#图片转换为字节
+						with open('pic3/1.jpg','rb') as f:
+						    res = f.read()
+						    
+						predict_request = '{"instances" : [{"b64": "%s"}]}' % base64.b64encode(res).decode()
+						print(predict_request)
+
+						headers = {'Content-Type': 'application/json'}
+						
+						response = requests.post(SERVER_URL, data=predict_request)
+						response.raise_for_status()
+						prediction = response.json()['predictions'][0]
+						#prediction = response.json()
+						proba = max(prediction['probabilities'])*100
+						class1000 = prediction['classes']
+
+						print('Prediction class: %s and Prediction proba: %s%%' % (class1000,proba ))
+
+					if __name__ == "__main__":
+
+						predict_api()
+					
+					
+					</code>
+					</pre>
+
+					<p style="font-size:25px" class="fragment grow">开启我们的TensorFlow Serving 部署ResNet 50</p>
+
+					</section>
+
+
+
+
+					<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+					<p>最后一步我要要做的是微信端的开发！</p>
+					
 					</section>
 					
 				</section>
@@ -158,50 +598,174 @@
 				<!-- section4 基于微信的图像识别应用  -->
 				<section>
 					<section>
-					<h3 style="font-family:'STLiti',华文隶书;text-transform:none">基于微信的图像识别应用</h3>
-
-					<pre>
-						<code class="hljs" data-trim contenteditable>
-							function linkify( selector ) {
-							  if( supports3DTransforms ) {
-
-							    var nodes = document.querySelectorAll( selector );
-
-							    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-							      var node = nodes[i];
-
-							      if( !node.className ) {
-							        node.className += ' roll';
-							      }
-							    }
-							  }
-							}
-						</code>
-					</pre>
+					<h3 style="font-family:'STLiti',华文隶书;text-transform:none">4.基于微信的图像识别应用</h3>
 					</section>
 
-					<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
+						<section style="text-align: left;">
+					<p style="font-size:25px">&#9760 我们基于微信构建最终的VQA系统</p><br>
+					<ul style="font-size:25px;list-style-type:none;">
+					<li>&#9760 方案有3种：
+						<ul style="font-size:25px">
+							<li>基于微信聊天接口(Python: itchat,wxpy)</li>
+							<li>基于公众号 (RWeixin)</li>
+							<li>基于微信小程序</li>
+						</ul>
+
+					</li>
+					</ul>
+					<br>
+					<p style="font-size:25px">&#9889 我们采取基于微信聊天的接口</p>
+
+					</section>
+
+					<section style="text-align: left;">
+					<p style="font-size:25px">&#9760 核心代码如下:</p>
+					<pre>
+					<code  class="hljs" data-trim contenteditable>
+
+					'''
+					过程描述：
+						1.登录微信
+						2.检查图像消息和发送人员
+						3.获取图像并做简单图像处理
+						4.访问tensorflow serving RestAPI
+						5.获得预测结果
+						6.返回给微信发送给接收者
+					'''
+
+					__version__="v0.1.0"
+					__author__="Xu Jing"
+
+					import requests
+					import json
+					import datetime
+					import itchat
+					# import wxpy
+					import time 
+					import base64
+					import pandas as pd
+
+					img_label = pd.read_excel("imgeNet_label/Image_label.xlsx")
+					SERVER_URL = 'http://172.16.100.202:8501/v1/models/resnet:predict'
+
+					def predict_api(img_path):
+
+						#图片转换为字节
+						with open(img_path,'rb') as f:
+						    res = f.read()
+						    
+						predict_request = '{"instances" : [{"b64": "%s"}]}' % base64.b64encode(res).decode()
+						#print(predict_request)
+
+						headers = {'Content-Type': 'application/json'}
+						
+						response = requests.post(SERVER_URL, data=predict_request)
+						response.raise_for_status()
+						prediction = response.json()['predictions'][0]
+						#prediction = response.json()
+						proba = max(prediction['probabilities'])*100
+						class1000 = prediction['classes']
+
+						class_EN = list(img_label[img_label['class_NO']==class1000]['class_EN'])[0]
+						return (class_EN,proba)
+
+						#print('Prediction class: %s and Prediction proba: %s%%' % (class1000,proba))
+
+					# 登录 & 消息回复
+					@itchat.msg_register(itchat.content.PICTURE,isGroupChat=True)
+					def reply_text(msg):
+						chatroom_id = msg['FromUserName']
+						chatroom_NickName = [item['NickName'] for item in chatrooms if item['UserName'] == chatroom_id ]
+						username = msg['ActualNickName']
+						print(chatroom_NickName[0]+'@'+username)
+
+						if chatroom_NickName[0] =='XXXXX':
+							itchat.send("[%s]收到我们一家@%s的信息：%s\n" %(time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(msg['CreateTime'])),username,"一张图片"),'filehelper')
+						
+							msg.download(msg.fileName)
+							# 发送信息
+							
+							itchat.send('@%s@%s' % (username,msg['FileName']))
+							print('%s received' % msg['Type'])
+							my_class,my_proba = predict_api(msg.fileName)
+							return '@%s 让我猜猜,你发的这张图片有 %s %%的概率是: %s \n' %(username,my_proba,my_class)
+
+						elif chatroom_NickName[0] !='XXXXXX':
+							return 
+
+
+
+					itchat.auto_login()
+					chatrooms = itchat.get_chatrooms(update=True, contactOnly=True)
+					itchat.run()
+					input()
+
+
+
+					</code>
+					</pre>
+
+					</section>
+
+					<section style="text-align: left;">
+					<p style="font-size:25px">&#9760 基于WeChat的VQA效果:</p><br>
+					<img src='img/vqa1.jpg' >
+
+					</section>
+
+					<section style="text-align: left;">
+					<p style="font-size:25px">&#9760 基于WeChat的VQA效果:</p><br>
+					<img src='img/vqa2.jpg' >
+
+					</section>
+
+					<section style="text-align: left;">
+					<p style="font-size:25px">&#9760 基于WeChat的VQA效果:</p><br>
+					<img src='img/vqa3.jpg' >
+
+					</section>
+
+					<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+						
+						<p>最后开启服务让我们体验基于微信的VQA系统！ &#9749 </p>
+
 					</section>
 
 				</section>
 
+				<section>
+					<section>
+					<h3 style="font-family:'STLiti',华文隶书;text-transform:none">5.总结</h3>
+					</section>
+
+					<section>
+						<ul style="font-size:35px;list-style-type:none;">
+						<li>&#9760 传统机器学习模型部署的方法</li>
+						<li>&#9760 深度学习模型的部署之道--在硬件资源限制下如何提高模型调用速度:</li>
+						<ul style="font-size:30px">
+							<li>传统的部署方法</li>
+							<li>simple TensorFlow Serving</li>
+							<li>TensorFlow Serving+Docker</li>
+							<li>基于WeChat的VQA系统构建</li>
+						</ul>
+						<li>&#9760 与传统方式相比，大大提高了深度学习模型的调用速度，并且支持GPU和多框架</li>
+						</ul>
+					</section>
+					
+
+				</section>
+
 		
-				<!-- section5 the end -->
+				<!-- section6 the end -->
 				<section style="text-align: left;">
 					<h1>THE END</h1>
 					<p>
-						- <a href="https://slides.com">Thanks Reveal.js</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js"> Reveal.js</a> <br>
-						- <a href="https://github.com/DataXujing/tensorflow-serving-Wechat">Source code &amp; documentation</a><br>
-						- <a href="123">Online Slides</a>
+						- <a href="https://slides.com" target="_blank">Thanks Reveal.js</a> <br>
+						- <a href="https://github.com/hakimel/reveal.js" target="_blank"> Reveal.js</a> <br>
+						- <a href="https://github.com/DataXujing/tensorflow-serving-Wechat" target="_blank">Source code &amp; documentation</a><br>
+						- <a href="https://dataxujing.github.io/tensorflow-serving-Wechat/#/" target="_blank">
+						Online Slides</a><br>
+						- <a href="https://dataxujing.github.io" target="_blank">About Xu Jing</a>
 					</p>
 				</section>
 
